@@ -63,32 +63,32 @@ public:
     // returs a matrice that is upper triangle matrice of **mat parameters.
     int **upperTriangleMatrice(int **mat, int *height)
     {
-        int **topTriangleM = copyMatrice(mat, height);
+        int **upperTriangleM = copyMatrice(mat, height);
 
         for (int i = 0; i < *height; i++)
         {
             for (int j = 0; j < i; j++)
             {
-                topTriangleM[i][j] = 0;
+                upperTriangleM[i][j] = 0;
             }
         }
 
-        return topTriangleM;
+        return upperTriangleM;
     }
     // returs a matrice that is lower triangle matrice of **mat parameters.
     int **lowerTriangleMatrice(int **mat, int *height)
     {
-        int **subTriangleM = copyMatrice(mat, height);
+        int **lowerTriangleM = copyMatrice(mat, height);
 
-        for (int i = 0; i < *height; i++)
+        for (int i = 0; i <= *height; i++)
         {
-            for (int j = *height; j >= i; j--)
+            for (int j = *height; j > i; j--)
             {
-                subTriangleM[i][j] = 0;
+                lowerTriangleM[i][j] = 0;
             }
         }
 
-        return subTriangleM;
+        return lowerTriangleM;
     }
 
     // creates zero matrice.
