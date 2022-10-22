@@ -80,9 +80,9 @@ public:
     {
         int **lowerTriangleM = copyMatrice(mat, height);
 
-        for (int i = 0; i <= *height; i++)
+        for (int i = 0; i < *height; i++)
         {
-            for (int j = *height; j > i; j--)
+            for (int j = *height; j >= i; j--)
             {
                 lowerTriangleM[i][j] = 0;
             }
